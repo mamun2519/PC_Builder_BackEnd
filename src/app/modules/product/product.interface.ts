@@ -23,3 +23,11 @@ export type IProduct = {
 };
 
 export type ProductModel = Model<IProduct, Record<string, unknown>>;
+
+export type IProductFilters = {
+  searchTerm: string;
+  category: string;
+  brand: string;
+  status: string;
+  productName: string;
+};
