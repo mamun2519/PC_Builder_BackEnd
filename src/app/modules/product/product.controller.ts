@@ -8,6 +8,7 @@ import { IProduct } from "./product.interface";
 import { ProductService } from "./product.service";
 
 const getAllProduct = catchAsync(async (req: Request, res: Response) => {
+  console.log("hello");
   const filters: any = pick(req.query, productFilterEableFiled);
   const paginationOptions = pick(req.query, paginationFields);
   const result = await ProductService.getProductFromDB(
